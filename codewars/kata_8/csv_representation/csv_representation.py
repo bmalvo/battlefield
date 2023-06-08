@@ -23,14 +23,14 @@ exampel = [[0, 1, 2, 3, 4],
 def to_csv_text(array):
     """returns the CSV representation of a two-dimensional numeric array"""
     final = ''
-    for i in range(len(array)):
+    for line, row in enumerate(array):
         count = 0
-        for j in array[i]:
-            final += str(j)
+        for item in row:
+            final += str(item)
             count += 1
-            if count < len(array[i]):
+            if count < len(row):
                 final += ','
-        if array[i] is not array[-1]:
+        if line + 1 != len(array):
             final += '\n'
     return final
 
