@@ -25,5 +25,5 @@ Ra!Ra!Ra!"""
 
 def cheer(number_of_yards):
     """Output appropriate string"""
-    return 'shh' if not number_of_yards else 'High Five' \
-        if number_of_yards >= 10 else 'Ra!' * number_of_yards
+    return 'shh' if number_of_yards < 1 else 'High Five' \
+        if number_of_yards > 10 else 'Ra!' * number_of_yards
