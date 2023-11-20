@@ -25,7 +25,7 @@ def vowel_counter(text):
     """counting vowels in sentence"""
     count = 0
     vowels = ['a','e','i','o','u']
-    for k,v in enumerate(text.lower()):
-        if v in vowels:
+    for index, value in enumerate(text.lower()):
+        if value in vowels:
             count += 1
     return count
