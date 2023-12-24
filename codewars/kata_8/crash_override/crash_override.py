@@ -1,0 +1,32 @@
+"""Every budding hacker needs an alias! The Phantom Phreak, Acid Burn, 
+Zero Cool and Crash Override are some notable examples from the film Hackers.
+
+Your task is to create a function that, given a proper first and last name, 
+will return the correct alias.
+
+Notes:
+Two objects that return a one word name in response to the first letter of 
+the first name and one for the first letter of the surname are already given. 
+See the examples below for further details.
+
+If the first character of either of the names given to the function is not 
+a letter from A - Z, you should return "Your name must start with a letter 
+from A - Z."
+
+Sometimes people might forget to capitalize the first letter of their name 
+so your function should accommodate for these grammatical errors."""
+
+
+def alias_gen(f_name: str, l_name: str):
+    """return hacker alias"""
+    message = 'Your name must start with a letter from A - Z.'
+    alias_1 = f_name[0].upper()
+    alias_2 = l_name[0].upper()
+    first_name = {'A': 'Alpha', 'B': 'Beta', 'C': 'Cache', 'D': 'Data',
+                  'M': 'Malware', 'F': 'Function', 'H': 'Half-Life',
+                  'W': 'Wifi'}
+    surname = {'A': 'Analogue', 'B': 'Bomb', 'C': 'Catalyst', 'M': 'Mike',
+               'T': 'T-Rex', 'P': 'Payload', 'W': 'Worm', 'K': 'Kiler'}
+    if f_name[0].isalpha() and l_name[0].isalpha():
+        return f'{first_name.get(alias_1)} {surname.get(alias_2)}'
+    return message
