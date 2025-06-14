@@ -1,0 +1,1 @@
+from area_of_a_square import square_area
