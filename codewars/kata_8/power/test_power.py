@@ -13,5 +13,3 @@ from power import number_to_pwr
     ])
 def test_number_to_pwr(given, expected):
     assert number_to_pwr(given[0], given[1]) == expected
-
-# assert number_to_pwr(1,1) == 1
