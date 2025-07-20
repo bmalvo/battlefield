@@ -7,4 +7,5 @@ Good luck :)"""
 
 
 def unusual_five():
+    """always return a 5"""
     return len('asdfg')
