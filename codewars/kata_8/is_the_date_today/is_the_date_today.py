@@ -9,10 +9,5 @@ from datetime import datetime
 
 
 def is_today(date: datetime) -> bool:
-    # your code here
-    return  datetime(date).strftime == datetime.today()
-
-
-# print(is_today((2020, 10, 1, 1, 1, 1, 1)))
-
-print(datetime.today())
+    """Check if the date is today or not"""
+    return  date.date() == datetime.today().date()
