@@ -39,7 +39,25 @@ return value must be Newton for force (obviously)
 
 
 def solution(arr_val, arr_unit):
+    """find the gravitational force between two spherical objects"""
+    mass_unit = {
+        'kg' : 1000,
+        'g': 1,
+        'mg': 0.001,
+        'μg': 0.000001,
+        'lb': 453.59237
+    },
+    distance_units = {
+        'm': 1,
+        'cm': 0.01,
+        'mm': 0.001,
+        'μm': 0.000001,
+        'ft': 0.3048
+    }
     "F = G * (m₁ * m₂) / r²"
-    return (6.67259 * 0.00000000010) * (arr_val[0] * (arr_val[1] * 1000)) / (arr_val[2] ** 2) 
+    print(mass_unit['kg'])
+    return
+    # return (6.67259 * 0.00000000010) * ((arr_val[0] * mass_unit.get(arr_unit[0])) * ((arr_val[1] * mass_unit.get(arr_unit[1])) * 1000)) / ((arr_val[2] * distance_units.get(arr_unit[2])) ** 2) 
 
-print(solution([1000, 1000, 100], ["g", "kg", "m"]))
+
+print(solution([1000, 1000, 100], ["g", "kg", "m"]))  # 6.67e-12
