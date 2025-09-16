@@ -4,7 +4,7 @@ from find_the_force_of_gravity_between_two_objects import solution
 
 @pytest.mark.parametrize('given, expected', [
     (([1000, 1000, 100], ["g", "kg", "m"]), 6.67e-12),
-    (([1000, 1000, 100], ["kg", "kg", "m"]), 6.667e-9),
+    (([1000, 1000, 100], ["kg", "kg", "m"]), 6.6699999999999995e-09),
     (([1000, 1000, 100], ["kg", "kg", "cm"]), 0.0000667)
                                             ])
 
