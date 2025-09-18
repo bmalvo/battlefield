@@ -38,25 +38,8 @@ Happy Coding ^_^ """
 
 def is_valid(formula):
     """checking if the formula obey the rules"""
-    rule1 = (1 and 2) not in formula
-    rule2 = (3 and 4) not in formula
+    rule1 = not ((1 in formula) and (2 in formula))
+    rule2 = not ((3 in formula) and (4 in formula))
     rule3 = (5 in formula and (6 in formula)) or (5 not in formula) and (6 not in formula)
-    rule4 = (7 or 8) in formula
+    rule4 = 7 in formula or 8 in formula
     return rule1 and rule2 and rule3 and rule4
-
-
-# material1 and material2 cannot be selected at the same time
-# material3 and material4 cannot be selected at the same time
-# material5 and material6 must be selected at the same time
-# material7 or material8 must be selected(at least one, or both)
-
-print(is_valid([2, 7, 8]))  # True
-print(is_valid([2, 7, 8]))  # True
-print(is_valid([2, 5, 6, 7, 8]))  # True
-print(is_valid([1, 4, 8]))  # True
-print(is_valid([1, 4, 7]))  # True
-print(is_valid([2, 3, 8]))  # True
-print(is_valid([2, 8]))  # True
-
-
-
